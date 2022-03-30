@@ -29,4 +29,27 @@ document.body.innerHTML = `<div class="todo-table">
       </div>
     </div>`
 
-describe
+    describe('add and remove', () => {
+      window.localStorage = Storage.prototype;
+      test('Add ToDo', () => {
+        const todoList = new Todo();
+        todoList.addTask('Test');
+        expect(todoList.list).toHaveLength(1);
+    
+        const storage = JSON.parse(localStorage.getItem('todo-list'));
+        expect(storage).not.toBe(null);
+        expect(localStorage).toHaveLength(1);
+      });
+    
+      test('remove', () => {
+        const removeTask = new Todo();
+    
+        removeTask.addTask('test');
+        removeTask.addTask('test');
+        removeTask.deleteTask(1);
+        expect(removeTask.list).toHaveLength(2);
+        removeTask.refresh();
+        expect(removeTask.list).toHaveLength(0);
+      });
+    });
+    
