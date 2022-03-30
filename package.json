@@ -5,9 +5,13 @@
   "private": true,
   "scripts": {
     "webpack": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watchAll --coverage",
     "build": "webpack",
     "start": "webpack serve --open"
+  },
+   "jest": {
+    "verbose": true,
+    "testEnvironment": "jsdom"
   },
   "repository": {
     "type": "git",
@@ -22,12 +26,14 @@
   "homepage": "https://github.com/deyemiobaa/Webpack-Boilerplate#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "babel-install": "2.1.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.4",
     "hint": "^6.1.10",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.1",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
@@ -38,6 +44,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.17.7",
     "lodash": "^4.17.21",
     "sortablejs": "^1.15.0"
   },
