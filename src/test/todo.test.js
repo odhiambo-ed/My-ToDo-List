@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
-import deleteTodo from "../modules/deleteTodo.js"
-import Todo from "../modules/todo.js";
+import deleteTodo from '../modules/deleteTodo.js';
+import Todo from '../modules/todo.js';
 
 document.body.innerHTML = `<div class="todo-table">
       <!-- todo title -->
@@ -27,29 +27,28 @@ document.body.innerHTML = `<div class="todo-table">
       <div class="clear-all">
         <p class="clear-title" id="clear-title">Clear all completed</p>
       </div>
-    </div>`
+    </div>`;
 
-    describe('add and remove', () => {
-      window.localStorage = Storage.prototype;
-      test('Add ToDo', () => {
-        const todoList = new Todo();
-        todoList.addTask('Test');
-        expect(todoList.list).toHaveLength(1);
-    
-        const storage = JSON.parse(localStorage.getItem('todo-list'));
-        expect(storage).not.toBe(null);
-        expect(localStorage).toHaveLength(1);
-      });
-    
-      test('remove', () => {
-        const removeTask = new Todo();
-    
-        removeTask.addTask('test');
-        removeTask.addTask('test');
-        removeTask.deleteTask(1);
-        expect(removeTask.list).toHaveLength(2);
-        removeTask.refresh();
-        expect(removeTask.list).toHaveLength(0);
-      });
-    });
-    
+describe('add and remove', () => {
+  window.localStorage = Storage.prototype;
+  test('Add ToDo', () => {
+    const todoList = new Todo();
+    todoList.addTodo('Test');
+    expect(todoList.list).toHaveLength(1);
+
+    const storage = JSON.parse(localStorage.getItem('todos'));
+    expect(storage).not.toBe(null);
+    expect(localStorage).toHaveLength(1);
+  });
+
+  test('remove', () => {
+    const removeTask = new Todo();
+
+    removeTask.addTodo('test');
+    removeTask.addTodo('test');
+    removeTask.deleteTask(1);
+    expect(removeTask.list).toHaveLength(2);
+    removeTask.refresh();
+    expect(removeTask.list).toHaveLength(0);
+  });
+});

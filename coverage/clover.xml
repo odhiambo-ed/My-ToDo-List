@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1648664066988" clover="3.2.0">
+  <project timestamp="1648664066988" name="All files">
+    <metrics statements="12" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2" elements="16" coveredelements="8" complexity="0" loc="12" ncloc="12" packages="1" files="2" classes="2"/>
+    <file name="deleteTodo.js" path="C:\Users\odhia\Dropbox\MICROVERSE\Projects\Module-2\My-ToDo-List\src\modules\deleteTodo.js">
+      <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="0" type="stmt"/>
+      <line num="3" count="0" type="stmt"/>
+      <line num="4" count="0" type="stmt"/>
+      <line num="5" count="0" type="stmt"/>
+    </file>
+    <file name="todo.js" path="C:\Users\odhia\Dropbox\MICROVERSE\Projects\Module-2\My-ToDo-List\src\modules\todo.js">
+      <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="14" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>
